@@ -27,6 +27,9 @@ public class Equipe {
 	@Column(name = "escudo")
 	private String escudo;
 	
+	public Equipe() {
+	}
+	
 	public Equipe(Long id, String nome, String treinador, String escudo) {
 		super();
 		this.id = id;

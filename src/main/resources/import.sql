@@ -1,0 +1,1 @@
+INSERT INTO tb_equipe(escudo, nome, treinador) VALUES ('SEM ESCUDO', 'BAHEACELONA BA', 'JEANP');
