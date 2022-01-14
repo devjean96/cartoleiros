@@ -9,8 +9,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "tb_time")
-public class Time {
+@Table(name = "tb_equipe")
+public class Equipe {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +27,7 @@ public class Time {
 	@Column(name = "escudo")
 	private String escudo;
 	
-	public Time(Long id, String nome, String treinador, String escudo) {
+	public Equipe(Long id, String nome, String treinador, String escudo) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -69,7 +69,7 @@ public class Time {
 	
 	@Override
     public String toString() {
-        return "Time [id=" + id + ", nome=" + nome + ", treinador=" + treinador + ", escudo=" + escudo + "]";
+        return "Equipe [id=" + id + ", nome=" + nome + ", treinador=" + treinador + ", escudo=" + escudo + "]";
  
     }
 	
