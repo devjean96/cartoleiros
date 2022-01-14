@@ -30,20 +30,17 @@ public class Equipe {
 	public Equipe() {
 	}
 	
-	public Equipe(Long id, String nome, String treinador, String escudo) {
-		super();
+	public Equipe(Long id, @NotNull String nome, @NotNull String treinador, String escudo) {
 		this.id = id;
 		this.nome = nome;
 		this.treinador = treinador;
 		this.escudo = escudo;
 	}
 
+
+
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getNome() {
