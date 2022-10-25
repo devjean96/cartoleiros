@@ -2,6 +2,7 @@ package br.com.devjean.cartoleiros.service;
 
 import java.util.Optional;
 
+import br.com.devjean.cartoleiros.dto.request.EquipeRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -45,5 +46,13 @@ public class EquipeService {
 	public EquipeDTO findByTreinador(String treinador) {
 		Equipe equipe = repository.findByTreinador(treinador);
 		return new EquipeDTO(equipe);
+	}
+
+	public EquipeDTO saveEquipe(EquipeRequest equipeRequest) {
+		return new EquipeDTO(
+				repository.save(
+					new Equipe(equipeRequest.getNome(),
+								equipeRequest.getTreinador(),
+								equipeRequest.getEscudo())));
 	}
 }

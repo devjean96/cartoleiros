@@ -1,5 +1,7 @@
 package br.com.devjean.cartoleiros.entities;
 
+import lombok.RequiredArgsConstructor;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -33,17 +35,22 @@ public class Equipe {
 	
 	@OneToMany(mappedBy = "id.equipe")
 	private Set<Pontuacao> pontos = new HashSet<>();
-	
+
 	public Equipe() {
 	}
-	
+
+	public Equipe(@NotNull String nome, @NotNull String treinador, String escudo) {
+		this.nome = nome;
+		this.treinador = treinador;
+		this.escudo = escudo;
+	}
+
 	public Equipe(Long id, @NotNull String nome, @NotNull String treinador, String escudo) {
 		this.id = id;
 		this.nome = nome;
 		this.treinador = treinador;
 		this.escudo = escudo;
 	}
-
 
 
 	public Long getId() {
